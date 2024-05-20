@@ -142,6 +142,18 @@ Geri Bildirim
 Katkıda Bulunma
 
 Katkıda bulunmak isterseniz, lütfen bir pull request gönderin. Herhangi bir sorunuz veya öneriniz varsa, lütfen iletişime geçin.
+
+[![Build Status](https://travis-ci.com/yourusername/quest-of-hearts.svg?branch=main)](https://travis-ci.com/yourusername/quest-of-hearts)
+
+Quest of Hearts, çiftlerin birbirlerine olan sevgilerini güçlendirmek için eğlenceli bir kaçış odası oyunudur. Her seviyede farklı bilmeceleri çözerek ilerleyin ve sonunda sevgilinizi kurtarın.
+
+## Kurulum ve Çalıştırma
+
+### Gereksinimler
+
+- Node.js (v14 veya üstü)
+- PostgreSQL (veritabanı için)
+
 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+Bu proje MIT lisansı altında lisanslanmıştır.com
