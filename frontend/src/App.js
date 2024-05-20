@@ -13,6 +13,8 @@ import GamePlay from './components/GamePlay';
 import PlayGame from './components/PlayGame';
 import FeedbackForm from './components/FeedbackForm';
 import Help from './components/Help';
+import CharacterCustomization from './components/CharacterCustomization';
+import PhotoUpload from './components/PhotoUpload';
 import './styles.css';
 
 const App = () => {
@@ -29,6 +31,8 @@ const App = () => {
                 <Route path="/play" component={PlayGame} />
                 <Route path="/feedback" component={FeedbackForm} />
                 <Route path="/help" component={Help} />
+                <Route path="/customize-character" component={CharacterCustomization} />
+                <Route path="/upload-photos" component={PhotoUpload} />
                 <Footer />
             </Router>
         </Provider>

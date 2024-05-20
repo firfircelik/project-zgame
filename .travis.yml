@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "14"
+services:
+  - postgresql
+env:
+  global:
+    - NODE_ENV=test
+    - JWT_SECRET=your_jwt_secret_key
+before_script:
+  - psql -c 'create database quest_of_hearts_db;' -U postgres
+  - psql -c "CREATE USER quest_of_hearts_user WITH PASSWORD 'password';" -U postgres
+  - psql -c "ALTER USER quest_of_hearts_user CREATEDB;" -U postgres
+  - cd backend
+  - npm install
+  - cd ../frontend
+  - npm install
+script:
+  - cd backend
+  - npm test
+  - cd ../frontend
+  - npm test

@@ -80,3 +80,43 @@ body {
 .error-message {
     color: red;
 }
+
+.character {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* Skin Tones */
+.character.default {
+    background-image: url('/assets/avatar_character.png');
+}
+
+.character.light {
+    background-image: url('/assets/avatar_character_light.png');
+}
+
+.character.dark {
+    background-image: url('/assets/avatar_character_dark.png');
+}
+
+/* Outfits */
+.character.outfit1 {
+    background-image: url('/assets/avatar_character_outfit1.png');
+}
+
+.character.outfit2 {
+    background-image: url('/assets/avatar_character_outfit2.png');
+}
+
+/* Shoes */
+.character.shoes1 {
+    background-image: url('/assets/avatar_character_shoes1.png');
+}
+
+.character.shoes2 {
+    background-image: url('/assets/avatar_character_shoes2.png');
+}
