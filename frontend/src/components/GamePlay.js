@@ -15,6 +15,10 @@ const GamePlay = () => {
     const [hasKey, setHasKey] = useState(false);
     const [doorPosition, setDoorPosition] = useState({ left: 90, top: 90 });
 
+    const customization = JSON.parse(localStorage.getItem('characterCustomization')) || { skinTone: 'default', outfit: 'default', shoes: 'default' };
+    const rescuerPhoto = localStorage.getItem('rescuerPhoto');
+    const rescuedPhoto = localStorage.getItem('rescuedPhoto');
+
     useEffect(() => {
         dispatch(getQuestions());
     }, [dispatch]);
@@ -82,7 +86,10 @@ const GamePlay = () => {
             <h2>Seviye {currentLevel + 1}</h2>
             <p>{questions[currentLevel].question}</p>
             <div className="game-area">
-                <div className="character" style={{ left: `${characterPosition.left}%`, top: `${characterPosition.top}%` }}></div>
+                <div
+                    className={`character ${customization.skinTone} ${customization.outfit} ${customization.shoes}`}
+                    style={{ left: `${characterPosition.left}%`, top: `${characterPosition.top}%`, backgroundImage: `url(${rescuerPhoto})` }}
+                ></div>
                 {!hasKey && <div className="key" style={{ left: `${keyPosition.left}%`, top: `${keyPosition.top}%` }}></div>}
                 {hasKey && <div className="door" style={{ left: `${doorPosition.left}%`, top: `${doorPosition.top}%` }}></div>}
                 {showHint && (

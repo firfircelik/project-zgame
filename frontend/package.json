@@ -1,0 +1,9 @@
+{
+    "scripts": {
+      "test": "react-scripts test"
+    },
+    "devDependencies": {
+      "react-scripts": "4.0.3"
+    }
+  }
+  
